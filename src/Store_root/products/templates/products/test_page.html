@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title|title}}</title>
+</head>
+<body>
+<h1>{{head}}</h1>
+<p>{{userName}}<p/>
+{% for  product in products %}
+<h4> {{ product.name}}</h4>
+<h4> {{ product.price}}</h4>
+{% endfor %}
+
+
+
+{% if products_of_promotion %}
+<h3 style="color: red">Товары по акции</h3>
+{% for product in products_of_promotion %}
+
+<h4> {{product.name}} </h4>
+<h4>{{product.price}} </h4>
+
+{% endfor %}
+{% endif %}
+
+</body>
+</html>
